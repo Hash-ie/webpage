@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign up</title>
+        <style>
+    body {
+      background: linear-gradient(to right, #f60776, #ffb6c1);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+    }
+    input {
+      margin: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: white;
+      color: #f60776;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+        <script>
+            function signup() {
+                var user = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var error = false;
+                var fullname = document.getElementById("Fullname").value;
+              var confirmPassword = document.getElementById("ConfirmPassword").value;
+
+              if (fullname.trim() === "") {
+             error = true;
+            alert("Full name cannot be empty");
+            }
+
+            if (confirmPassword !== password) {
+            error = true;
+           alert("Passwords do not match");
+   }
+
+                if (user.length < 2) {
+                    error = true;
+                    alert("Username can not be empty or less than 2");
+                }
+
+                if (password.length < 4) {
+                    error = true;
+                    alert("Password can not be empty or less than 4");
+                }
+
+                if (error) {
+                    alert("Correct errors and submit");
+                } else {
+                    alert("Ready to submit");
+                    alert("you posted = username: " + user + " password: " + password);
+                 window.location.href = "login.html";
+                }
+    
+            }
+        </script>
+    </head>
+ <body>
+   <form action="Registration.html" method="post">
+      <label>Full name</label>
+     <input type="text" id="Fullname"><br>
+     
+    <label>Username</label>
+     <input type="text" id="username"><br>
+        
+     <label>Password</label>
+      <input type="password" id="password"><br>
+      
+      <label>Confirm password</label>
+               <input type="password" id="ConfirmPassword"><br>
+       
+
+        <input type="button" name="submit" value="sign up" onclick="signup()">
+
+  </form>
+  </body>
+</html>
