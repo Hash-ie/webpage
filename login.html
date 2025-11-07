@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign up</title>
+        <style>
+    body {
+      background: linear-gradient(to right, #f60776, #ffb6c1);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+    }
+    input {
+      margin: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: white;
+      color: #f60776;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+
+       
+       <script>
+            function Login() {
+                var user = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var error = false;
+
+                if (user.length < 2) {
+                    error = true;
+                    alert("Username can not be empty or less than 2");
+                }
+
+                if (password.length < 4) {
+                    error = true;
+                    alert("Password can not be empty or less than 4");
+                }
+
+                if (error) {
+                    alert("Correct errors and submit");
+                } else {
+                    alert("Login successful");
+                    window.location.href = "webpage.html";
+                }
+            }
+        </script>
+    </head>
+ <body>
+   <h1>Login to Mercy's Page</h1>
+     <label>Username</label>
+     <input type="text" id="username"><br>
+          
+     <label>Password</label>
+      <input type="password" id="password"><br>
+      
+      <label>Confirm password</label>
+               <input type="password" id="ConfirmPassword"><br>
+       
+
+        <input type="button" name="submit" value="Log in" onclick="Login()">
+
+  </body>
+</html>
