@@ -1,72 +1,128 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Mercy's page</title>
+  <title>Mercy's page</title>
+  <style>
+      body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(to right, #f60776, #ffb6c1);
+      background-color: rgba(246, 7, 118, 0.655);
+    }
+
+    .loading-screen {
+      max-width: 50%;
+      line-height: 1.4;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .loading__author {
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: rgb(245, 7, 177);
+      margin: 0.5rem 0 2rem 0;
+      display: block;
+    }
+
+    .loading__anim {
+      width: 36px;
+      height: 36px;
+      display: inline-block;
+      border: 6px solid rgb(249, 149, 189);
+      border-left-color: rgb(249, 247, 248);
+      border-top-color: rgb(249, 247, 248);
+      border-radius: 50%; /* to make it a circle */
+      animation: spin 600ms infinite linear;/*to make it spin*/
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: rgba(249, 245, 248, 0.844);
+      font-size: 14;
+      margin-top: 5px;
+    }
+
+    h2 {
+      font-family: 'lobster', cursive;
+      color: rgba(210, 239, 173, 0.844);
+      font-size: 14;
+      margin-top: 5px;
+    }
+
+    img {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+  </style>
+
+  <script>
+    window.addEventListener("load", function () {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    });
+  </script>
 </head>
+
 <body>
-   
+  <!-- Loader -->
+  <section id="loader" class="loading-screen">
+    <span class="loading__author"> -Loading-</span>
+    <span class="loading__anim"></span>
+  </section>
 
-        <style>
-           
+  <!-- Main Content -->
+  <div id="content" style="display: none;">
+    <h1>Welcome to My Webpage</h1>
 
-  h1 { font-family: 'Pacifico', cursive; }
-
-            h1{color:rgba(249, 245, 248, 0.844);
-            font-size:14;
-        margin-top:5px;}
-        img {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  border-radius: 10px;
-}
-        h2 { font-family: 'lobster', cursive; }
-
-            h2{color:rgba(210, 239, 173, 0.844);
-            font-size:14;
-        margin-top:5px;}
-        body{
-  background: linear-gradient(to right, #f60776, #ffb6c1);
-
-            background-color:rgba(246, 7, 118, 0.655);}
-       
-       </style>
-        </body>
-        <h1>Welcome to My Webpage</h1>
-         <section id="About me"></section>
-         <h2>About Me</h2>
-         <p>This is me</p>
-         <img src="me.jpg" alt="A picture of me" width="150" height="250">
-         <p>My name is <b>Mercy!</b>
-         I am excited to share my first webpage with you.
+    <section id="About me">
+      <h2>About Me</h2>
+      <p>This is me</p>
+      <img src="me.jpg" alt="A picture of me" width="150" height="250">
+      <p>My name is <b>Mercy!</b>
+        I am excited to share my first webpage with you.
         I am a statistics student at MNUC.
         I love coding and learning new things about web development.
         This page is pretty just like me.
         As you guessed I like pink hence my background.
         Hope to see you around more often!
         XOXO twin!!!!
-        </p>
-        <section id="interests">
-        <h2>My Interests</h2>
-        <ul>
-            <li>Listening to music</li>
-            <P>You can check out my playlist here:Spotify:<a href="https://open.spotify.com/playlist/1kwZnwwprV4KzNEDb5Ew94?si=4a28009f8ab34524&pt=6a0a8ac85b87c4cc94e578c614b3cca9" target="_blank">My playlist</a></P>
-            <li>Reading novels especially mystery and gory horror ones!</li>
-            <li>Photography</li>
-            <p>I sometimes enjoy capturing the beauty of nature through my lens especially during sunsets.</p>
-            <li>Painting</li>
-        </ul>
-        <p>There is this awesome image of the sunset I took</p>
-        <img src="image 1.jpg" alt="Sunset"width="150" height="180">
+      </p>
+    </section>
 
+    <section id="interests">
+      <h2>My Interests</h2>
+      <ul>
+        <li>Listening to music</li>
+        <p>You can check out my playlist here: Spotify:
+          <a href="https://open.spotify.com/playlist/1kwZnwwprV4KzNEDb5Ew94?si=4a28009f8ab34524&pt=6a0a8ac85b87c4cc94e578c614b3cca9" target="_blank">My playlist</a>
+        </p>
+        <li>Reading novels especially mystery and gory horror ones!</li>
+        <li>Photography</li>
+        <p>I sometimes enjoy capturing the beauty of nature through my lens especially during sunsets.</p>
+        <li>Painting</li>
+      </ul>
+      <p>There is this awesome image of the sunset I took</p>
+      <img src="image 1.jpg" alt="Sunset" width="150" height="180">
     </section>
 
     <footer>
-        <h2>Hit me up !</h2>
-        <p>Tiktok: <a href="https://www.tiktok.com/@_h.aw.t_ie" target="_blank">tiktok.com/@_h.aw.t_ie</a></p>
-        <p>Instagram: <a href="https://instagram.com/h.aw.t_i.e" target="_blank">instagram.com/h.aw.t_i.e</a></p>
+      <h2>Hit me up !</h2>
+      <p>Tiktok: <a href="https://www.tiktok.com/@_h.aw.t_ie" target="_blank">tiktok.com/@_h.aw.t_ie</a></p>
+      <p>Instagram: <a href="https://instagram.com/h.aw.t_i.e" target="_blank">instagram.com/h.aw.t_i.e</a></p>
     </footer>
-    <a href="signup.html">New? signup Here</a>
-<a href="login.html">Have an account?Login Here</a>
 
+    <a href="signup.html">New? signup Here</a><br>
+    <a href="login.html">Have an account?Login Here</a>
+  </div>
 </body>
 </html>
-        </html>   
