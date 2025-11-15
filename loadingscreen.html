@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple loading screen</title>
+        <style>
+            body{ display: flex; 
+            justify-content:center;
+        align-items:center;
+        min-height: 100vh;}
+        .loading-screen{max-width:50%;
+            line-height:1.4;
+            font-size:1.2rem;
+            font-weight:bold ;
+            text-align: center;
+            }
+        .loading__author{ font-weight:normal;
+            font-size:0.9rem;
+            color:rgb(245, 7, 177);  
+            margin: 0.5rem 0 2rem 0;
+            display: block;
+            }
+        .loading__anim{width:36px;
+            height:36px;}
+        .loading__anim{width:36px; 
+            height: 36px;
+            display: inline-block;}
+        .loading__anim{width:36px;
+            height:36px;
+            display:inline-block;
+            border:6px solid rgb(249, 149, 189);}
+        .loading__anim{ width:36px;
+            height:36px;
+            display:inline-block;
+            border:6px solid rgb(249, 149, 189);
+        border-left-color: rgb(249, 247, 248);
+    border-top-color: rgb(249, 247, 248);}
+        .loading__anim{border-radius: 50%;} 
+        @keyframes spin{to{transform:rotate(1turn)}}
+        .loading__anim{animation: spin 600ms infinite linear;}
+            
+            </style>
+        <body>
+            <section class="loading-screen">
+                <span class="loading__author"> -Loading-</span>
+                <span class="loading__anim"></span>
+            </section>
+            
+        </body>
+    </head>
